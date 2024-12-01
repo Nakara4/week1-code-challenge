@@ -41,5 +41,27 @@ function calculateNetSalary(basicSalary, benefits) {
     // Calculate PAYE
     let taxableIncome = grossSalary;
     let paye = 0;
+
+    for (const bracket of taxBrackets) {
+        if (taxableIncome <= bracket.upper) {
+            paye += taxableIncome * bracket.rate;
+            break;
+        } else {
+            paye += bracket.upper * bracket.rate;
+            taxableIncome -= bracket.upper;
+        }
+    }
+    
+     // Apply personal relief
+     paye = Math.max(0, paye - personalRelief);
+
+     // Calculate NHIF deduction
+     const nhifDeduction = nhifRates.find(rate => grossSalary <= rate.upper).deduction;
+ 
+     // Calculate NSSF deduction
+     const nssfDeduction = Math.min(grossSalary, tierOneLimit) * nssfRate;
+ 
+     // Calculate net salary
+     const netSalary = grossSalary - (paye + nhifDeduction + nssfDeduction);
  
 }
