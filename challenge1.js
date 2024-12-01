@@ -25,6 +25,10 @@ function getStudentGrade() {// Promot the user for marks
         grade = "E";
     }
 
-
+    //Output the grade 
+    alert( `The student's grade is ;${grade}`);
 
 }
+
+// Call the fuction
+getStudentGrade();
