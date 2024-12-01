@@ -10,4 +10,9 @@ function checkSpeed() {
         alert("Invalid input. Please enter a valid speed.");
         return;
     }
+
+    // Define the speed limit and the demerit point calculation
+    const speedlimit = 70;
+    const kmperpoint = 5;
+    
 }
