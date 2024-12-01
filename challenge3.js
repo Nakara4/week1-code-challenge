@@ -29,5 +29,17 @@ function calculateNetSalary(basicSalary, benefits) {
         { upper: 89999, deduction: 1500 },
         { upper: 99999, deduction: 1600 },
         { upper: Infinity, deduction: 1700 }
-    ]
+    ];
+
+     // NSSF rates
+     const nssfRate = 0.06; // 6%
+     const tierOneLimit = 6000; // Tier I
+     
+     // Calculate gross salary
+    const grossSalary = basicSalary + benefits;
+
+    // Calculate PAYE
+    let taxableIncome = grossSalary;
+    let paye = 0;
+ 
 }
