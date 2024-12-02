@@ -63,5 +63,7 @@ function calculateNetSalary(basicSalary, benefits) {
  
      // Calculate net salary
      const netSalary = grossSalary - (paye + nhifDeduction + nssfDeduction);
+
+     
  
 }

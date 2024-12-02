@@ -30,5 +30,3 @@ function getStudentGrade() {// Promot the user for marks
 
 }
 
-// Call the fuction
-getStudentGrade();

@@ -31,5 +31,3 @@ function checkSpeed() {
 
 }
 
-// Call the fuction
-checkSpeed();
